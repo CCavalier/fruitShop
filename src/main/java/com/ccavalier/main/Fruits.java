@@ -4,7 +4,9 @@ public enum Fruits {
 
 	BANANE("banane", 150, 150),
 	POMME("pomme", 100, 0),
-	CERISE("cerise", 75, 30);
+	APPLE("apple", 100, 0),
+	MELE("mele", 100, 0),
+	CERISE("cerise", 75, 20);
 	
 	 
 	private String name;

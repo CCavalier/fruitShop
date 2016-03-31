@@ -75,35 +75,41 @@ public class FruitShopTest {
 	public void testReduction() throws IOException{
 		//banane
 		outContent.reset();
-				ByteArrayInputStream in = new ByteArrayInputStream((Fruits.POMME.getName()).getBytes());
+				ByteArrayInputStream in = new ByteArrayInputStream((Fruits.CERISE.getName()).getBytes());
 				System.setIn(in);
 				FruitShop.readLine(new BufferedReader(new InputStreamReader(System.in)));
-				Assert.assertEquals(Fruits.POMME.getName()+" >"+Fruits.POMME.getPrice()+"\n", outContent.toString());
+				Assert.assertEquals(Fruits.CERISE.getName()+" >"+Fruits.CERISE.getPrice()+"\n", outContent.toString());
 				outContent.reset();
 				//cerise
-				in = new ByteArrayInputStream((Fruits.CERISE.getName()).getBytes());
+				in = new ByteArrayInputStream((Fruits.APPLE.getName()).getBytes());
 				System.setIn(in);
 				FruitShop.readLine(new BufferedReader(new InputStreamReader(System.in)));
-				Assert.assertEquals(Fruits.CERISE.getName()+" >175\n", outContent.toString());
+				Assert.assertEquals(Fruits.APPLE.getName()+" >175\n", outContent.toString());
 				outContent.reset();
 				//cerise
 				
 				in = new ByteArrayInputStream((Fruits.CERISE.getName()).getBytes());
 				System.setIn(in);
 				FruitShop.readLine(new BufferedReader(new InputStreamReader(System.in)));
-				Assert.assertEquals(Fruits.CERISE.getName()+" >220\n", outContent.toString());
+				Assert.assertEquals(Fruits.CERISE.getName()+" >230\n", outContent.toString());
 				outContent.reset();
 				//Banane
 				in = new ByteArrayInputStream((Fruits.BANANE.getName()).getBytes());
 				System.setIn(in);
 				FruitShop.readLine(new BufferedReader(new InputStreamReader(System.in)));
-				Assert.assertEquals(Fruits.BANANE.getName()+" >370\n", outContent.toString());
+				Assert.assertEquals(Fruits.BANANE.getName()+" >380\n", outContent.toString());
 				outContent.reset();
-				//banane
-				in = new ByteArrayInputStream((Fruits.BANANE.getName()).getBytes());
+				//pomme
+				in = new ByteArrayInputStream((Fruits.POMME.getName()).getBytes());
 				System.setIn(in);
 				FruitShop.readLine(new BufferedReader(new InputStreamReader(System.in)));
-				Assert.assertEquals(Fruits.BANANE.getName()+" >370\n", outContent.toString());
+				Assert.assertEquals(Fruits.POMME.getName()+" >480\n", outContent.toString());
+				outContent.reset();
+				//pomme
+				in = new ByteArrayInputStream((Fruits.MELE.getName()).getBytes());
+				System.setIn(in);
+				FruitShop.readLine(new BufferedReader(new InputStreamReader(System.in)));
+				Assert.assertEquals(Fruits.MELE.getName()+" >580\n", outContent.toString());
 				outContent.reset();
 	}
 	
