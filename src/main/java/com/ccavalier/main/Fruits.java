@@ -2,17 +2,19 @@ package com.ccavalier.main;
 
 public enum Fruits {
 
-	BANANE("banane", 150),
-	POMME("pomme", 100),
-	CERISE("cerise", 75);
+	BANANE("banane", 150, 150),
+	POMME("pomme", 100, 0),
+	CERISE("cerise", 75, 30);
 	
 	 
 	private String name;
 	private int price;
+	private int reduction;
 
-	Fruits(String name, int price){
+	Fruits(String name, int price, int reduction){
 	 this.setName(name);
 	 this.setPrice(price);
+	 this.setReduction(reduction);
 	}
 
 	public String getName() {
@@ -23,6 +25,14 @@ public enum Fruits {
 		this.name = name;
 	}
 
+	public static Fruits getByName(String name){
+		for(Fruits fruit : values()){
+			if(fruit.name.equals(name)){
+				return fruit;
+			}
+		}
+		return null;
+	}
 
 	
 	public static double getPriceByName(String name){
@@ -40,6 +50,14 @@ public enum Fruits {
 
 	public void setPrice(int price) {
 		this.price = price;
+	}
+
+	public int getReduction() {
+		return reduction;
+	}
+
+	public void setReduction(int reduction) {
+		this.reduction = reduction;
 	}
 	
 }
